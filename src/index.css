@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Better universal selector */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @apply text-white bg-[#111] antialiased;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+/* Add a hover color to links so you see an effect */
+a {
+  color: #0ea5e9; /* Tailwind sky-500 */
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #38bdf8; /* Tailwind sky-400 */
+}
+
+/* Scrollbar tweaks */
+#tasklist {
+  overflow-x: auto; /* Ensure it can scroll to test */
+  white-space: nowrap;
+}
+
+#tasklist::-webkit-scrollbar {
+  height: 6px;
+  background: transparent;
+}
+
+#tasklist::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 9999px;
+}
+
+#tasklist::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
